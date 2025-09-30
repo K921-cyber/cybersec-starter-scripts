@@ -27,5 +27,5 @@
 You only need **Python 3.8+** — no external libraries required for basic use.
 
 ```bash
-git clone https://github.com/yourusername/cybersec-starter-scripts.git
+git clone https://github.com/K921-cyber/cybersec-starter-scripts.git
 cd cybersec-starter-scripts
