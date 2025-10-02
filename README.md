@@ -17,6 +17,8 @@
 | `hash_generator.py` | Generates SHA-256 or MD5 hashes from input text or files | Understand how passwords/data are stored securely (or not!) |
 | `port_scanner.py` | Scans top 10 ports on a target IP (TCP connect scan) | Learn basics of network reconnaissance |
 | `file_integrity_checker.py` | Compares file hash over time to detect tampering | Core concept in malware detection & system monitoring |
+| `banner.py` | Compares file hash over time to detect tampering | Core concept in malware detection & system monitoring |
+
 
 📁 All scripts are standalone — no complex setup needed!
 
