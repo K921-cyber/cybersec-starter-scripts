@@ -1,7 +1,7 @@
 # 🔐 CyberSec Starter Scripts — Python Edition
 
 > 🎓 Beginner-friendly cybersecurity scripts to learn core concepts: hashing, scanning, integrity & password strength.  
-> ⚠️ Educational use only — never test on systems without permission.
+ ⚠️ Educational use only — never test on systems without permission.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
