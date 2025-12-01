@@ -95,7 +95,7 @@ flowchart TD
     E --> F
 ```
 
-3️⃣ port_scanner.py — Basic Port Scanner
+## 3️⃣ port_scanner.py — Basic Port Scanner
 
 Performs a TCP connect scan on the 10 most common ports.
 
@@ -111,7 +111,7 @@ flowchart TD
     F --> G
     G --> H[Display Scan Results]
 ```
-4️⃣ file_integrity_checker.py — File Integrity Checker
+## 4️⃣ file_integrity_checker.py — File Integrity Checker
 
 Detects file tampering by comparing current and baseline hashes.
 
@@ -126,7 +126,7 @@ flowchart TD
     E --> |No| G[WARNING: File Modified]
 ```
 
-5️⃣ banner_grabber.py — Banner Grabber
+## 5️⃣ banner_grabber.py — Banner Grabber
 
 Retrieves service banner/version information from an open port.
 
