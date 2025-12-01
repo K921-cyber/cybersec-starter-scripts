@@ -50,3 +50,29 @@ You only need **Python 3.8+** — no external libraries required.
 ```bash
 git clone https://github.com/K921-cyber/cybersec-starter-scripts.git
 cd cybersec-starter-scripts
+```
+# 📘 Detailed Script Documentation
+
+---
+
+## 1️⃣ `password_strength.py` — Password Strength Checker
+
+Evaluates the strength of a password based on:
+
+- Length  
+- Digits  
+- Symbols  
+- Uppercase and lowercase characters  
+
+### Flowchart
+
+```mermaid
+flowchart TD
+    A[Enter Password] --> B[Check Length]
+    B --> C[Check Uppercase Characters]
+    C --> D[Check Lowercase Characters]
+    D --> E[Check Digits]
+    E --> F[Check Symbols]
+    F --> G[Calculate Strength Score]
+    G --> H[Output: Weak / Medium / Strong]
+
