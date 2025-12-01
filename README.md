@@ -94,3 +94,52 @@ flowchart TD
     D --> F[Display Hash Output]
     E --> F
 ```
+
+3️⃣ port_scanner.py — Basic Port Scanner
+
+Performs a TCP connect scan on the 10 most common ports.
+
+Flowchart
+```mermaid
+flowchart TD
+    A[Enter Target IP / Hostname] --> B[Load Top 10 Ports]
+    B --> C[Attempt TCP Connection on Each Port]
+    C --> D{Connection Successful?}
+    D --> |Yes| E[Port is OPEN]
+    D --> |No| F[Port is CLOSED or REFUSED]
+    E --> G[Add to Results]
+    F --> G
+    G --> H[Display Scan Results]
+```
+4️⃣ file_integrity_checker.py — File Integrity Checker
+
+Detects file tampering by comparing current and baseline hashes.
+
+Flowchart
+```mermaid
+flowchart TD
+    A[Enter File Path] --> B{Baseline Hash Exists?}
+    B --> |No| C[Generate & Save Baseline Hash]
+    B --> |Yes| D[Generate New Hash]
+    D --> E{Hashes Match?}
+    E --> |Yes| F[File is Untouched]
+    E --> |No| G[WARNING: File Modified]
+```
+
+5️⃣ banner_grabber.py — Banner Grabber
+
+Retrieves service banner/version information from an open port.
+
+Flowchart
+```mermaid
+flowchart TD
+    A[Enter Host & Port] --> B[Open TCP Socket]
+    B --> C[Send Request or Wait for Banner]
+    C --> D{Banner Received?}
+    D --> |Yes| E[Display Banner Data]
+    D --> |No| F[No Response or Service Hidden]
+```
+# 📄 License
+
+This project is licensed under the MIT License.
+You may use, modify, and distribute this project responsibly.
