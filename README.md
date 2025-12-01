@@ -43,16 +43,10 @@ flowchart LR
 
     C1 --> E
 ```
-##⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 
-You only need Python 3.8+ — no external libraries required.
+You only need **Python 3.8+** — no external libraries required.
 
+```bash
 git clone https://github.com/K921-cyber/cybersec-starter-scripts.git
 cd cybersec-starter-scripts
-
-
-(Optional) Create and activate a virtual environment:
-
-python -m venv venv
-venv\Scripts\activate     # Windows
-source venv/bin/activate  # Linux / macOS
