@@ -42,3 +42,17 @@ flowchart LR
     F --> F1[Fetch Service Banner & Version]
 
     C1 --> E
+```
+##⚙️ Installation & Setup
+
+You only need Python 3.8+ — no external libraries required.
+
+git clone https://github.com/K921-cyber/cybersec-starter-scripts.git
+cd cybersec-starter-scripts
+
+
+(Optional) Create and activate a virtual environment:
+
+python -m venv venv
+venv\Scripts\activate     # Windows
+source venv/bin/activate  # Linux / macOS
