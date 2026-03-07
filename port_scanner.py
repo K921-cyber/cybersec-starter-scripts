@@ -23,13 +23,3 @@ if __name__ == "__main__":
     target = input("Enter target hostname or IP: ")
 
     scan_ports(target, COMMON_PORTS)
-
-
-
-
-
-
-
-
-
-
