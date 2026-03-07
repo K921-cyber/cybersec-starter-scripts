@@ -24,4 +24,3 @@ if __name__ == "__main__":
         print("⚠️  File has been modified!")
         print(f"Expected: {expected_hash}")
         print(f"Actual:   {actual_hash}")
-

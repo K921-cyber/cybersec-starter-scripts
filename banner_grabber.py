@@ -8,9 +8,7 @@ lock = threading.Lock()
 q = Queue()
 
 def port_scan(port):
-    """
-    Scans a single port and tries to grab a banner.
-    """
+ ## Scans a single port and tries to grab a banner.
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)

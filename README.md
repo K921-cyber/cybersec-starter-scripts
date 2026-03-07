@@ -1,3 +1,6 @@
+
+
+
 # 🔐 CyberSec Starter Scripts — Python Edition
 
 > 🎓 Beginner-friendly cybersecurity scripts to learn core concepts: hashing, scanning, integrity monitoring, and password strength evaluation.  
