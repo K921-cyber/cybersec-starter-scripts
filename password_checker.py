@@ -28,10 +28,3 @@ if __name__ == "__main__":
     is_strong, msg = check_password_strength(pwd)
 
     print(msg)
-
-
-
-
-
-
-
