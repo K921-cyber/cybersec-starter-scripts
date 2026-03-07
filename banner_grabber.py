@@ -54,13 +54,3 @@ if __name__ == "__main__":
     q.join() # Wait for the queue to be empty
 
     print("\nScan complete.")
-
-
-
-
-
-
-
-
-
-
