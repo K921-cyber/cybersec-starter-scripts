@@ -1,3 +1,9 @@
+import re
+
+def check_password_strength(password):
+    """
+    Checks password strength based on:
+    - Length >= 8
     - Contains uppercase, lowercase, digit, and special char
     """
     if len(password) < 8:
@@ -22,9 +28,6 @@ if __name__ == "__main__":
     is_strong, msg = check_password_strength(pwd)
 
     print(msg)
-
-
-
 
 
 
