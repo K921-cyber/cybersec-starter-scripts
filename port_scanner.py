@@ -1,5 +1,3 @@
-# port_scanner.py
-
 import socket
 
 COMMON_PORTS = [21, 22, 23, 25, 53, 80, 110, 143, 443, 3389]
@@ -24,10 +22,3 @@ if __name__ == "__main__":
     target = input("Enter target hostname or IP: ")
 
     scan_ports(target, COMMON_PORTS)
-
-
-
-
-
-
-

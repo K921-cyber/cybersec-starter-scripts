@@ -1,6 +1,3 @@
-
-
-
 import re
 
 def check_password_strength(password):
@@ -31,11 +28,4 @@ if __name__ == "__main__":
     is_strong, msg = check_password_strength(pwd)
 
     print(msg)
-
-
-
-
-
-
-
-
+    print(msg)
