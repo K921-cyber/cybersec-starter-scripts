@@ -1,6 +1,5 @@
 
 
-
 # 🔐 CyberSec Starter Scripts — Python Edition
 
 > 🎓 Beginner-friendly cybersecurity scripts to learn core concepts: hashing, scanning, integrity monitoring, and password strength evaluation.  
@@ -146,6 +145,7 @@ flowchart TD
 
 This project is licensed under the MIT License.
 You may use, modify, and distribute this project responsibly.
+
 
 
 
