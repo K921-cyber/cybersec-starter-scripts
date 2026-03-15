@@ -1,3 +1,4 @@
+
 import hashlib
 
 def get_file_hash(filename, algorithm='sha256'):
