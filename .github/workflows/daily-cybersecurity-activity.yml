@@ -1,0 +1,70 @@
+name: Daily Cybersecurity Activity
+
+on:
+  schedule:
+    # Runs every day at 18:00 UTC (23:30 IST).
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-activity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate daily security note
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          DATE="$(date -u +'%Y-%m-%d')"
+          DAY="$(date -u +'%u')"
+          FILE="activity/${DATE}.md"
+          mkdir -p activity
+
+          case "$DAY" in
+            1) TOPIC="Linux Security"; FOCUS="permissions, least privilege, sudo, and secure file handling" ;;
+            2) TOPIC="Network Security"; FOCUS="ports, services, reconnaissance, and defensive network visibility" ;;
+            3) TOPIC="Web Security"; FOCUS="OWASP concepts, input validation, authentication, and secure headers" ;;
+            4) TOPIC="SOC & Detection"; FOCUS="log analysis, indicators of compromise, alert triage, and detection engineering" ;;
+            5) TOPIC="Python for Security"; FOCUS="automation, defensive scripting, validation, and safe error handling" ;;
+            6) TOPIC="Threat Intelligence"; FOCUS="IOCs, TTPs, MITRE ATT&CK concepts, and intelligence enrichment" ;;
+            7) TOPIC="Security Fundamentals"; FOCUS="CIA triad, risk, defense-in-depth, and security hygiene" ;;
+          esac
+
+          if [ ! -f "$FILE" ]; then
+            cat > "$FILE" <<EOF
+          # Daily Cybersecurity Note — ${DATE}
+
+          **Topic:** ${TOPIC}
+
+          ## Today's Focus
+          ${FOCUS}.
+
+          ## Practice Log
+          - Reviewed one cybersecurity concept.
+          - Documented a practical defensive takeaway.
+          - Maintained the learning trail for future reference.
+
+          > Educational use only. Test security techniques only on systems you own or are explicitly authorized to assess.
+          EOF
+          fi
+
+      - name: Commit daily activity
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add activity/
+          if git diff --cached --quiet; then
+            echo "No new activity to commit."
+            exit 0
+          fi
+          git commit -m "chore: daily cybersecurity activity $(date -u +'%Y-%m-%d')"
+          git push
